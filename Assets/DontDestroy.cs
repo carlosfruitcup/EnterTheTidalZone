@@ -11,7 +11,7 @@ public class DontDestroy : MonoBehaviour
         if (global == null) global = this;
         else if(doDestroy)
         {
-            Destroy(global);
+            Destroy(global.gameObject);
             global = this;
         }
         else

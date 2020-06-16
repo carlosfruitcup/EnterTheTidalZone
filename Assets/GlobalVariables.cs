@@ -10,6 +10,7 @@ public class GlobalVariables : MonoBehaviour
 {
     public bool busy = false;
     public bool isIntro = false;
+    public bool rewindTime = false;
     public static GlobalVariables global;
     public ScreenFade fadeHandler;
     public MapHandler mapHandler;
@@ -32,12 +33,12 @@ public class GlobalVariables : MonoBehaviour
                 busy = true;
                 PauseTime(true);
             }
-            else if(Input.GetKeyDown(KeyCode.Return))
+            /*else if(Input.GetKeyDown(KeyCode.Return))
             {
                 mapHandler.gameObject.SetActive(true);
                 mapHandler.ShowMap();
                 busy = true;
-            }
+            }*/
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && pauseHandler.activeSelf == true)
         {

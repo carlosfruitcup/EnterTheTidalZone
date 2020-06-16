@@ -24,9 +24,10 @@
 | Skullaton | I like potatoes |
 | okay. | Working on this chilling game was amazing! |
 | Carter | Hi Mom I helped Out with xbox crew and mobile bois |
-| nuppington#6384 | N/A |
+| nuppington#6384 | pretzel |
 | Errorwolf | It was a wonderful trip making this game! |
 | Typical Cheems | guys stay foxy and dont do drug! |
+| Dave_Nep | N/A |
 
 ## Attributed Credits
 ```
