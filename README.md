@@ -7,22 +7,23 @@
 ## Verified Credits
 | Name | Message |
 | --- | --- |
-| erin | black lives matter|
-| Kevin "Kevster" V | One of my greatest achievement, bikini_bottom haha|
-| StickGamesStudio | yes|
-| Just Doctor_Peppermint  | Swag|
-| Anthony Hampton | Trans Rights!|
-| Chase “Magma” Ferrell | “Who ya calling pinhead?”|
-| The Noise | No, i’m fine|
-| JackzGamesYT | I'm just here for the pizza, man.|
+| TeamPopplio	| ​I am glad to be here, people are awesome! |
+| erin | black lives matter |
+| Kevin "Kevster" V | One of my greatest achievement, bikini_bottom haha |
+| StickGamesStudio | yes |
+| Just Doctor_Peppermint  | Swag |
+| Anthony Hampton | Trans Rights! |
+| Chase “Magma” Ferrell | “Who ya calling pinhead?” |
+| The Noise | No, i’m fine |
+| JackzGamesYT | I'm just here for the pizza, man. |
 | Dex Stepeck | N/A |
-| Gracidea | Whoa! Looking cool Player!|
-| PrivatePenguin12 | Don't forget about me!|
+| Gracidea | Whoa! Looking cool Player! |
+| PrivatePenguin12 | Don't forget about me! |
 | Ian Fox | I was the first person other than kiwi |
 | Pumpkin_boii | hope you had fun playing |
-| Skullaton | I like potatoes|
-| okay. | Working on this chilling game was amazing!|
-| Carter | Hi Mom I helped Out with xbox crew and mobile bois|
+| Skullaton | I like potatoes |
+| okay. | Working on this chilling game was amazing! |
+| Carter | Hi Mom I helped Out with xbox crew and mobile bois |
 | nuppington#6384 | N/A |
 | Errorwolf | It was a wonderful trip making this game! |
 
