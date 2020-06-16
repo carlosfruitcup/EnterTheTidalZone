@@ -30,7 +30,7 @@ public class SettingsHandler : MonoBehaviour
         {
             defaultOptions[i] = currentOptions[i];
         }
-        ApplySettings()
+        ApplySettings();
     }
     public void SetOption1(bool option)
     {
