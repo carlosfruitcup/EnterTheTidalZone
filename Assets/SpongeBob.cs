@@ -165,7 +165,7 @@ public class SpongeBob : MonoBehaviour
         if(col.transform.tag == "Enemy")
         {
             BaseEnemy enemy = col.gameObject.GetComponent<BaseEnemy>();
-            if(!invincible)
+            if(!invincibleStarted)
                 health -= enemy.damage;
         }
     }
