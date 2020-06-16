@@ -61,6 +61,7 @@ public class GlobalVariables : MonoBehaviour
             Debug.Log("Android")
             #else
             joystick.gameObject.SetActive(false);
+            transform.Find("GameButtons").Find("Jump").gameObject.SetActive(false);
             #endif
             if(!isIntro) {
                 music = GameObject.Find("DontDestroy").GetComponent<AudioSource>();
