@@ -5,27 +5,27 @@
 </p>
 
 ## Verified Credits
-```
-TeamPopplio "I am glad to be here, people are awesome!"
-erin "black lives matter" 
-wario land 4 on gba "One of my greatest achievement, bikini_bottom haha" 
-StickGamesStudio "yes" 
-🦄The Swag King✨#9908 "Swag" 
-Anthony Hampton "Trans Rights! 007 373 5963"
-Magma#9907 “Who ya calling pinhead?”
-the noise#5614 "No, i’m fine" 
-JackzGamesYT "I'm just here for the pizza, man."
-Dex Stepeck
-Gracie "Whoa! Looking cool Player!"
-PrivatePenguin12#3507 "Don't forget about me!"
-Walker "I was the first person other than kiwi"
-Pumpkin_boii "hope you had fun playing"
-Skullaton "I like potatoes"
-okay. "Working on this chilling game was amazing!"
-CarterCummins#6933 "Hi Mom I helped Out with xbox crew and mobile bois"
-nuppington#6384 aka Voya
-xXErrorwolfXx "It was a wonderful trip making this game!"
-```
+| Name | Message |
+| --- | --- |
+| erin | black lives matter|
+| Kevin "Kevster" V | One of my greatest achievement, bikini_bottom haha|
+| StickGamesStudio | yes|
+| Just Doctor_Peppermint  | Swag|
+| Anthony Hampton | Trans Rights!|
+| Chase “Magma” Ferrell | “Who ya calling pinhead?”|
+| The Noise | No, i’m fine|
+| JackzGamesYT | I'm just here for the pizza, man.|
+| Dex Stepeck | N/A |
+| Gracidea | Whoa! Looking cool Player!|
+| PrivatePenguin12 | Don't forget about me!|
+| Ian Fox | I was the first person other than kiwi |
+| Pumpkin_boii | hope you had fun playing |
+| Skullaton | I like potatoes|
+| okay. | Working on this chilling game was amazing!|
+| Carter | Hi Mom I helped Out with xbox crew and mobile bois|
+| nuppington#6384 | N/A |
+| Errorwolf | It was a wonderful trip making this game! |
+
 ## Attributed Credits
 ```
 "BELL 0103.wav" - zgump on freesound.org (CC0 1.0) - Converted to MP3 as pause_on.mp3 and pause_off.mp3 - https://freesound.org/people/zgump/sounds/83540/
