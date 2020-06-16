@@ -158,11 +158,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 1309979962908059477, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2714830077681547948, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -457,11 +452,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 7480998682656786777, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e440c5ee2f78e4e9ff0036b76ff825, type: 3}

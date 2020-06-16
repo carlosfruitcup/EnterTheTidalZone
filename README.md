@@ -26,6 +26,7 @@
 | Carter | Hi Mom I helped Out with xbox crew and mobile bois |
 | nuppington#6384 | N/A |
 | Errorwolf | It was a wonderful trip making this game! |
+| Typical Cheems | guys stay foxy and dont do drug! |
 
 ## Attributed Credits
 ```

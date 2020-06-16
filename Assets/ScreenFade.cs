@@ -34,6 +34,7 @@ public class ScreenFade : MonoBehaviour
 
     public IEnumerator Fade(bool fadeIn, float speed, Color color)
     {
+        if(!image) image = this.GetComponent<Image>();
         image.enabled = true;
         image.sprite = null;
         image.material = null;
@@ -60,6 +61,7 @@ public class ScreenFade : MonoBehaviour
 
     public IEnumerator FadeCutout(bool fadeIn, float speed, Sprite cutout)
     {
+        if(!image) image = this.GetComponent<Image>();
         if (cutout == null)
         {
             cutout = fadeCutouts[Random.Range(0, fadeCutouts.Length)];
