@@ -27,6 +27,8 @@ public class UnityBuild
 	 */
 	private static readonly string AndroidSdkDirectory = "C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK";
 
+	private static readonly string AndroidNdkDirectory = "C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK";
+
 	/*
 	 * -- Configuration --
 	 * 
@@ -40,7 +42,7 @@ public class UnityBuild
 	 * like to build for each specific platform. Each platform has BuildOptions for both development and release builds.
 	 * 
 	 * You can easily switch between Development/Release by adjusting the boolean directly below this message.
-	 */	
+	 */
 	private static readonly bool IsDevelopmentBuild = true;
 
 	private static readonly Dictionary<BuildTarget, PlatformBuilds> PlatformToBuild = new Dictionary<BuildTarget, PlatformBuilds>()
@@ -94,10 +96,10 @@ public class UnityBuild
 	 * 
 	 * DriveTempDirectory and DriveDirectory should be changed for your own paths!
 	 */
-	private static readonly string DriveTempDirectory = "C:/Users/Carl/Documents";
+	private static readonly string DriveTempDirectory = "C:/Users/Voya/Documents";
 	private static readonly string DriveTempFolderName = "JenkinsTemp";
 
-	private static readonly string DriveDirectory = "C:/Users/Carl/Google Drive";
+	private static readonly string DriveDirectory = "C:/Users/Voya/Desktop";
 	private static readonly string DriveFolderName = "Jenkins";
 
 	private static string DriveBuildLocation     => Path.Combine(DriveDirectory, DriveFolderName);
