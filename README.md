@@ -2,6 +2,16 @@
   <img width="417" height="156" src="https://cdn.discordapp.com/attachments/718268388371202088/721252891003846666/tidalzone.png">
   <h1 align="center">Enter the Tidal Zone</h1>
   <h2 align="center">A collaborative effort</h2>
+  <p align="center">
+    <a href="https://discord.gg/EyWgkcR"><img alt="Jellyfish Fields" src="https://img.shields.io/discord/718264431817261077"></a>
+<a href="https://github.com/Tidal-Members/EnterTheTidalZone/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/Tidal-Members/EnterTheTidalZone"></a>
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Tidal-Members/EnterTheTidalZone">
+  <a href="https://github.com/Tidal-Members/EnterTheTidalZone/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/Tidal-Members/EnterTheTidalZone/total"></a>
+  <a href="https://github.com/Tidal-Members/EnterTheTidalZone/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/Tidal-Members/EnterTheTidalZone?include_prereleases"></a>
+  </p>
+  <p align="center">
+    <a href="https://github.com/Tidal-Members/EnterTheTidalZone/actions"><img alt="GitHub license" src="https://github.com/Tidal-Members/EnterTheTidalZone/workflows/Unity%20Actions/badge.svg?branch=master"></a>
+  </p>
 </p>
 
 ## Verified Credits
