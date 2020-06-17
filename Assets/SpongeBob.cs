@@ -31,6 +31,8 @@ public class SpongeBob : MonoBehaviour
     private int invincibleCounter = 0;
     private bool dying = false;
     public SpriteRenderer[] sprites;
+	private string[] cheatCode;
+	private int index;
 	Animator m_Animator;
 
     void Start()
@@ -38,10 +40,30 @@ public class SpongeBob : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         ogSpeed = speed;
 		m_Animator = gameObject.GetComponent<Animator>();
+		cheatCode = new string[] { "s", "p", "a", "n", "g", "o" };
+		index = 0;
     }
 
     void Update()
     {
+		if (Input.anyKeyDown) {
+				// Check if the next key in the code is pressed
+			if (Input.GetKeyDown(cheatCode[index])) {
+				// Add 1 to index to check the next key in the code
+				index++
+			}
+		}
+		if (index == cheatCode.Length) {
+			if(invincible){
+				invincible = false;
+			} else {
+			invincible = true;
+			}
+		}
+        // Wrong key entered, we reset code typing
+		else {
+			index = 0;    
+		}
         if(health > 0)
         {
             if(health < healthBefore)
