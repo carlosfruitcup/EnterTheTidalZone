@@ -16,10 +16,10 @@ jobs:
       matrix:
         targetPlatform:
           - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
-            - StandaloneWindows # Build a Windows standalone.
-            - StandaloneLinux64 # Build a Linux 64-bit standalone.
-            - Android # Build an Android .apk standalone app.
-            - WebGL # WebGL.
+          - StandaloneWindows # Build a Windows standalone.
+          - StandaloneLinux64 # Build a Linux 64-bit standalone.
+          - Android # Build an Android .apk standalone app.
+          - WebGL # WebGL.
 
     steps:
     
