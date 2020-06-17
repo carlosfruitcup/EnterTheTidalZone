@@ -25,7 +25,7 @@ public class UnityBuild
 	 * 
 	 * Make sure to change these to your own personal paths to the dependencies!
 	 */
-	private static readonly string AndroidSdkDirectory = "C:/Users/Carl/AppData/Local/Android/Sdk";
+	private static readonly string AndroidSdkDirectory = "C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/SDK";
 
 	/*
 	 * -- Configuration --
@@ -45,12 +45,12 @@ public class UnityBuild
 
 	private static readonly Dictionary<BuildTarget, PlatformBuilds> PlatformToBuild = new Dictionary<BuildTarget, PlatformBuilds>()
 	{
-		{ BuildTarget.StandaloneWindows64,      new PlatformBuilds(BuildWindows, true) },
-		{ BuildTarget.StandaloneLinuxUniversal, new PlatformBuilds(BuildLinux,   true) },
-		{ BuildTarget.StandaloneOSX,            new PlatformBuilds(BuildMacOS,   true) },
+		{ BuildTarget.StandaloneWindows64,      new PlatformBuilds(BuildWindows, false) },
+		{ BuildTarget.StandaloneLinuxUniversal, new PlatformBuilds(BuildLinux,   false) },
+		{ BuildTarget.StandaloneOSX,            new PlatformBuilds(BuildMacOS,   false) },
 		{ BuildTarget.Android,                  new PlatformBuilds(BuildAndroid, true) },
-		{ BuildTarget.iOS,                      new PlatformBuilds(BuildiOS,     true) },
-		{ BuildTarget.WebGL,                    new PlatformBuilds(BuildWebGL,   true) },
+		{ BuildTarget.iOS,                      new PlatformBuilds(BuildiOS,     false) },
+		{ BuildTarget.WebGL,                    new PlatformBuilds(BuildWebGL,   false) },
 	};
 
 	private static readonly Dictionary<BuildTarget, PlatformSpecificBuildOptions> PlatformBuildOptions = new Dictionary<BuildTarget, PlatformSpecificBuildOptions>()
