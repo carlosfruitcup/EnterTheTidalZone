@@ -578,6 +578,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Jump
       objectReference: {fileID: 0}
+    - target: {fileID: 8703215017083307553, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 285
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703215017083307553, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 8703215017083307553, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 47
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e440c5ee2f78e4e9ff0036b76ff825, type: 3}
 --- !u!1 &133883635 stripped

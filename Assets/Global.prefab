@@ -3128,15 +3128,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This game is not yet finished, this build is from 6/16/2020.
+  m_text: 'This project is not yet finished!
 
-    All
-    (if not most) assets seen now are placeholders and will be replaced in the final
-    release.
+    All (if not most) assets seen now
+    are placeholders and will be replaced in the final release.
 
-    This work is a parody and is not affiliated with Viacom, Nickelodeon
-    or any associated intellectual properties. All rights belong to their respective
-    owners.'
+    This work is
+    a parody and is not affiliated with Viacom, Nickelodeon or any associated intellectual
+    properties. All rights belong to their respective owners.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9903a9506f61c84eb4c8dfadaa90d8e, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: d9903a9506f61c84eb4c8dfadaa90d8e, type: 2}
