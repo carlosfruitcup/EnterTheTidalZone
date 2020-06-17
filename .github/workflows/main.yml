@@ -11,15 +11,6 @@ jobs:
   build:
     name: Test & Build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        targetPlatform:
-          - WebGL # WebGL.
-          - Android # Build an Android .apk standalone app.
-          - StandaloneWindows # Build a Windows standalone.
-          - StandaloneLinux64 # Build a Linux 64-bit standalone.
-          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
 
     steps:
     
@@ -47,7 +38,7 @@ jobs:
         with:
           allowDirtyBuild: true
           unityVersion: 2019.4.0f1
-          targetPlatform: ${{ matrix.targetPlatform }}
+          targetPlatform: WebGL
 
       # Output 
       - uses: actions/upload-artifact@v1
