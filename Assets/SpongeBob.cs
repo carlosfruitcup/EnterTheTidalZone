@@ -31,11 +31,13 @@ public class SpongeBob : MonoBehaviour
     private int invincibleCounter = 0;
     private bool dying = false;
     public SpriteRenderer[] sprites;
+	Animator m_Animator;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         ogSpeed = speed;
+		m_Animator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -74,6 +76,11 @@ public class SpongeBob : MonoBehaviour
                 direction = GlobalVariables.global.joystick.GetInputDirection().x;
             else
                 direction = Input.GetAxis("Horizontal");
+			if(direction != 0){
+				m_Animator.SetBool("walk", true);
+			} else {
+				m_Animator.SetBool("walk", false);
+			}
             //if(direction != 0) Debug.Log(direction);
             if(!GlobalVariables.global.busy)
             {
