@@ -9,6 +9,7 @@ public class BaseEnemy : MonoBehaviour
     public int health = 1;
     public int damage = 1;
     public UnityEvent onDeath;
+	public UnityEvent onDamage;
     public TimeBody timeBody;
     public bool ready = false;
     public bool dying = false;

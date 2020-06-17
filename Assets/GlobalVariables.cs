@@ -25,20 +25,23 @@ public class GlobalVariables : MonoBehaviour
     public LeftJoystick joystick;
     void Update()
     {
-        if(!busy && !isIntro)
+        if(!busy)
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if(!isIntro)
             {
-                pauseHandler.SetActive(true);
-                busy = true;
-                PauseTime(true);
+                if(Input.GetKeyDown(KeyCode.Escape))
+                {
+                    pauseHandler.SetActive(true);
+                    busy = true;
+                    PauseTime(true);
+                }
+                /*else if(Input.GetKeyDown(KeyCode.Return))
+                {
+                    mapHandler.gameObject.SetActive(true);
+                    mapHandler.ShowMap();
+                    busy = true;
+                }*/
             }
-            /*else if(Input.GetKeyDown(KeyCode.Return))
-            {
-                mapHandler.gameObject.SetActive(true);
-                mapHandler.ShowMap();
-                busy = true;
-            }*/
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && pauseHandler.activeSelf == true)
         {
@@ -71,7 +74,11 @@ public class GlobalVariables : MonoBehaviour
                 postProcessing = GameObject.FindWithTag("Post Processing").GetComponent<PostProcessVolume>();
                 postProcessLayer = GameObject.FindWithTag("MainCamera").GetComponent<PostProcessLayer>();
             }
-            if(SceneManager.GetActiveScene().name != "title") StartCoroutine(fadeHandler.Fade(true,0.5f));
+            if(SceneManager.GetActiveScene().name != "title")
+            {
+                StartCoroutine(fadeHandler.Fade(true,0.5f));
+                if(busy) StartCoroutine(FadeAndUnbusy());
+            }
         }
     }
     void Start () {
@@ -86,6 +93,11 @@ public class GlobalVariables : MonoBehaviour
     {
         StartCoroutine(fadeHandler.Fade(false,0.5f));
         StartCoroutine(FadeAndLoad(scene));
+    }
+    public IEnumerator FadeAndUnbusy()
+    {
+        yield return new WaitForSeconds(0.5f);
+        busy = false;
     }
     public IEnumerator FadeAndLoad(string scene)
     {

@@ -31,6 +31,7 @@ public class SpongeBob : MonoBehaviour
     private int invincibleCounter = 0;
     private bool dying = false;
     public SpriteRenderer[] sprites;
+    public SpriteRenderer eyes;
 	Animator m_Animator;
 
     void Start()
@@ -38,6 +39,8 @@ public class SpongeBob : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         ogSpeed = speed;
 		m_Animator = gameObject.GetComponent<Animator>();
+        if(eyes)
+            StartCoroutine(Blinking());
     }
 	
 	public void cheat(){
@@ -153,7 +156,9 @@ public class SpongeBob : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
             for(int i=0;i < sprites.Length; i++)
             {
-                sprites[i].color = Color.gray;
+                if(sprites[i].name != "eyes")
+                    sprites[i].color = Color.gray;
+                else sprites[i].color = Color.white; //remove this and his eyes will be blinking during invincibility
             }
         }
         for(int i=0;i < sprites.Length; i++)
@@ -171,12 +176,25 @@ public class SpongeBob : MonoBehaviour
     }
     void OnControllerColliderHit(ControllerColliderHit col)
     {
-        Debug.Log(col.gameObject.name);
+        //Debug.Log(col.gameObject.name);
         if(col.transform.tag == "Enemy")
         {
             BaseEnemy enemy = col.gameObject.GetComponent<BaseEnemy>();
             if(!invincibleStarted)
+            {
                 health -= enemy.damage;
+                enemy.onDamage.Invoke();
+            }
+        }
+    }
+    IEnumerator Blinking()
+    {
+        while(true)
+        {
+            eyes.gameObject.SetActive(true);
+            yield return new WaitForSeconds(2.5f);
+            eyes.gameObject.SetActive(false);
+            yield return new WaitForSeconds(0.15f);
         }
     }
 }

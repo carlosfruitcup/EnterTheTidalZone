@@ -1402,7 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0764884d2266c864aa6873c39b548b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalY: -2391
+  originalY: -2571.1
   speed: 0.00025
 --- !u!114 &5084576879923651189
 MonoBehaviour:
@@ -1428,11 +1428,11 @@ MonoBehaviour:
     V\r\nStickGamesStudio\r\nJust Doctor_Peppermint \r\nAnthony Hampton\r\nChase
     \u201CMagma\u201D Ferrell\r\nThe Noise\r\nJackzGamesYT\r\nDex Stepeck\r\nGracidea\r\nPrivatePenguin12\r\nIan
     Fox\r\nPumpkin_boii\r\nSkullaton\r\nokay.\r\nCarter\r\nnuppington#6384\r\nErrorwolf\r\nTypical
-    Cheems\n\r\nUnder the advisory of TeamPopplio\r\nhttps://github.com/TeamPopplio/\r\n\r\nSpecial
-    thanks to the Discord moderators:\r\nerin\r\nKevin \"Kevster\" V\r\nIan Fox\r\nTypical
-    Cheems\n\r\nAnd those who were apart of the Group O' Nine:\r\nerin\r\nIan Fox\r\nTypical
-    Cheems\n\r\nCredits above are subject to change.\r\n\r\nAttributed credits can
-    be viewed in the file 'README.md' on the GitHub repository linked above.\r\n\r\nDISCLAIMER\r\nThis
+    Cheems\nDave_Nep \r\nmadboi214\nwichealda\nZanyeWeast\u200B\n\r\nUnder the advisory
+    of TeamPopplio\r\nhttps://github.com/TeamPopplio/\r\n\r\nSpecial thanks to the
+    Discord moderators:\r\nerin\r\nKevin \"Kevster\" V\r\nIan Fox\r\nTypical Cheems\nDave_Nep\nZanyeWeast\u200B\n\r\nCredits
+    above are subject to change.\r\n\r\nAttributed credits can be viewed in the file
+    'README.md' on the GitHub repository linked above.\r\n\r\nDISCLAIMER\r\nThis
     work is a parody and is not affiliated with Viacom, Nickelodeon or any associated
     intellectual properties. All rights belong to their respective owners."
   m_isRightToLeft: 0

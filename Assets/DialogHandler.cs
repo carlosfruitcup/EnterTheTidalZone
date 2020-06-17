@@ -6,7 +6,9 @@ using UnityEngine.Events;
 using TMPro;
 
 public class DialogHandler : MonoBehaviour
+
 {
+	public bool goBusy = false;
 	public bool dontDissapear = false;
 	public Vector3[] xyValues;
 	public bool startAfterFadeIn = false;
@@ -125,6 +127,14 @@ public class DialogHandler : MonoBehaviour
 	}
 	public void TriggerDialogue()
 	{
+		TriggerDialogue(0);
+	}
+
+	public void TriggerDialogue(int dialogToStart)
+	{
+		currentDialog = dialogToStart;
+		if(goBusy)
+			GlobalVariables.global.busy = true;
 		snd.clip = popUp;
 		snd.Play();
 		startTime = Time.time;
@@ -139,6 +149,8 @@ public class DialogHandler : MonoBehaviour
 		startTime = Time.time;
 		StopCoroutine(typing);
 		goBack = true;
+		if(goBusy)
+			GlobalVariables.global.busy = false;
 	}
 	private IEnumerator FadeThenTrigger()
 	{

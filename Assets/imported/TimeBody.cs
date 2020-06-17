@@ -26,7 +26,7 @@ public class TimeBody : MonoBehaviour {
 	void Update () {
 		if (GlobalVariables.global.rewindTime)
 			StartRewind();
-		else
+		else if(isRewinding)
 			StopRewind();
 	}
 
