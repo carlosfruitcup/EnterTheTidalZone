@@ -5378,6 +5378,7 @@ GameObject:
   - component: {fileID: 8849382175372650398}
   - component: {fileID: 4297344109036541137}
   - component: {fileID: 6531960202761457831}
+  - component: {fileID: 5471482445843509641}
   m_Layer: 5
   m_Name: Global
   m_TagString: Untagged
@@ -5428,6 +5429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   busy: 0
   isIntro: 0
+  rewindTime: 0
   fadeHandler: {fileID: 0}
   mapHandler: {fileID: 0}
   pauseHandler: {fileID: 0}
@@ -5533,6 +5535,18 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &5471482445843509641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660023646500268804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90976be834cfecd4680ef4d0dee50dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5660023647085778627
 GameObject:
   m_ObjectHideFlags: 0
@@ -6405,6 +6419,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 3396267649206020627}
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5471482445843509641}
+        m_MethodName: ExitApp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9582,6 +9607,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72e2ea18f57078c46a8937db244a78bd, type: 3}
+--- !u!224 &439502626562266466 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6487042454250780321, guid: 72e2ea18f57078c46a8937db244a78bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6638296991944582083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5241523356517873943 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1486845701560179412, guid: 72e2ea18f57078c46a8937db244a78bd,
@@ -9594,9 +9625,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21777b8f15224cf4da79f2cf4cc5d207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &439502626562266466 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6487042454250780321, guid: 72e2ea18f57078c46a8937db244a78bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 6638296991944582083}
-  m_PrefabAsset: {fileID: 0}
