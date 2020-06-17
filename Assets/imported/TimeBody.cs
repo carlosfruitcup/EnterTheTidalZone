@@ -11,11 +11,15 @@ public class TimeBody : MonoBehaviour {
 	List<PointInTime> pointsInTime;
 
 	CharacterController rb;
+    Rigidbody rb2;
 
 	// Use this for initialization
 	void Start () {
 		pointsInTime = new List<PointInTime>();
-		rb = GetComponent<CharacterController>();
+        if(isSpongebob)
+		    rb = GetComponent<CharacterController>();
+        else
+            rb2 = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -71,7 +75,10 @@ public class TimeBody : MonoBehaviour {
             GlobalVariables.global.busy = true;
         }
 		isRewinding = true;
-		rb.enabled = false;
+        if(isSpongebob)
+		    rb.enabled = false;
+        else
+            rb2.isKinematic = true;
 	}
 
 	public void StopRewind ()
@@ -87,7 +94,9 @@ public class TimeBody : MonoBehaviour {
             GlobalVariables.global.busy = false;
         }
 		isRewinding = false;
-		rb.enabled = true;
-        
+        if(isSpongebob)
+            rb.enabled = true;
+        else
+            rb2.isKinematic = false;
 	}
 }

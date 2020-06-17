@@ -11,14 +11,14 @@ public class BaseEnemy : MonoBehaviour
     public UnityEvent onDeath;
     public TimeBody timeBody;
     public bool ready = false;
-    private bool dying = false;
+    public bool dying = false;
 
-    void Awake()
+    public virtual void Awake()
     {
         timeBody = GetComponent<TimeBody>();
     }
 
-    void Update()
+    public virtual void Update()
     {
         if(health > 0 && !GlobalVariables.global.busy)
         {
@@ -35,7 +35,7 @@ public class BaseEnemy : MonoBehaviour
         }
     }
     
-    IEnumerator Death()
+    public IEnumerator Death()
     {
         dying = true;
         yield return null;
