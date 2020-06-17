@@ -15,11 +15,11 @@ jobs:
       fail-fast: false
       matrix:
         targetPlatform:
-          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
+          - WebGL # WebGL.
+          - Android # Build an Android .apk standalone app.
           - StandaloneWindows # Build a Windows standalone.
           - StandaloneLinux64 # Build a Linux 64-bit standalone.
-          - Android # Build an Android .apk standalone app.
-          - WebGL # WebGL.
+          - StandaloneOSX # Build a macOS standalone (Intel 64-bit).
 
     steps:
     
@@ -45,6 +45,7 @@ jobs:
       - name: Build project
         uses: webbertakken/unity-builder@v1.0
         with:
+          allowDirtyBuild: true
           unityVersion: 2019.4.0f1
           targetPlatform: ${{ matrix.targetPlatform }}
 
