@@ -143,6 +143,7 @@ public class UnityBuild
 	public static void SetupAndroidSdkPath()
 	{
 		EditorPrefs.SetString("AndroidSdkRoot", AndroidSdkDirectory);
+		EditorPrefs.SetString("AndroidNdkRoot", AndroidNdkDirectory);
 	}
 
 	public static void BuildPlatforms()
