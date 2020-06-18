@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class MoveEnemy1 : MonoBehaviour
+public class MoveEnemy1 : MonoBehaviour // change to MonoBehaviour' to 'BaseEnemy' whenever possible
 {
 	public int distance;
 	private int tracker;

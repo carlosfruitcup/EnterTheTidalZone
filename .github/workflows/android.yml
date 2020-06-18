@@ -1,4 +1,4 @@
-name: WebGL
+name: Android
 
 on:
   pull_request: {}
@@ -32,19 +32,19 @@ jobs:
         with:
           allowDirtyBuild: false
           unityVersion: 2019.4.0f1
-          targetPlatform: WebGL
+          targetPlatform: Android
 
       # Output 
       - uses: actions/upload-artifact@v1
         with:
           name: Build results
-          path: build/WebGL/WebGL
+          path: build
 
       # Butler
       - uses: josephbmanley/butler-publish-itchio-action@master
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
-          CHANNEL: HTML
+          CHANNEL: android
           ITCH_GAME: enterthetidalzone
           ITCH_USER: thetidalzone
-          PACKAGE: build/WebGL/WebGL
+          PACKAGE: build

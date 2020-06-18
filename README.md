@@ -26,7 +26,7 @@
 | Chase “Magma” Ferrell | “Who ya calling pinhead?” |
 | The Noise | No, i’m fine |
 | JackzGamesYT | I'm just here for the pizza, man. |
-| Dex Stepeck | N/A |
+| Dex Stepeck | Where’s the Lem. |
 | Gracidea | Whoa! Looking cool Player! |
 | PrivatePenguin12 | Don't forget about me! |
 | Ian Fox | I was the first person other than kiwi |
