@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+/// <summary>Imported from an earlier project. Unused...?
+/// <para>This is a MonoBehaviour class. </para>
+/// </summary>
 public class PlayerPositionCloner : MonoBehaviour
 {
     public GameObject player;

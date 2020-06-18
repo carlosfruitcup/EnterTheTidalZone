@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
- 
+/// <summary>This is used in Global, it bounces up and down the transform's scale upon hovering.
+/// <para>This is a class based on MonoBehaviour, IPointerEnterHandler and IPointerExitHandler. </para>
+/// <seealso cref="GlobalVariables"/>
+/// </summary>
 public class HoverBob: MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Transform nextBg;

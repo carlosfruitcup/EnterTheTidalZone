@@ -1,8 +1,10 @@
 //Original Scripts by IIColour (IIColour_Spectrum)
-
+//Modified from original...?
 using UnityEngine;
 using System.Collections;
-
+/// <summary>Unused.
+/// <para>This is a MonoBehaviour class. </para>
+/// </summary>
 [ExecuteInEditMode]
 public class TextureTileToScale : MonoBehaviour
 {

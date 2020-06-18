@@ -86,8 +86,8 @@ public class GlobalVariables : MonoBehaviour
         int height= 576; // or something else
         bool isFullScreen = false; // should be windowed to run in arbitrary resolution
         int desiredFPS = 60; // or something else
-    
         Screen.SetResolution (width , height, isFullScreen, desiredFPS );
+        Settings.Initialize();
     }
     public void Fade(string scene)
     {
@@ -118,5 +118,13 @@ public class GlobalVariables : MonoBehaviour
     {
         if(toggle) Time.timeScale = 0;
         else Time.timeScale = 1;
+    }
+    public void ToggleParticles(bool toggle)
+    {
+        foreach(ParticleSystem particles in Resources.FindObjectsOfTypeAll<ParticleSystem>())
+        {
+            if(toggle) particles.Play();
+            else particles.Stop();
+        }
     }
 }

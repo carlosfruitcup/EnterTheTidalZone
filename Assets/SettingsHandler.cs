@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>Used for Global to apply settings within the pause menu.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="GlobalVariables"/>
+/// </summary>
 public class SettingsHandler : MonoBehaviour
 {
     public bool[] currentOptions = new bool[6];
@@ -74,16 +74,7 @@ public class SettingsHandler : MonoBehaviour
             defaultOptions[i] = currentOptions[i];
         }
         PlayerPrefs.Save();
-        //real stuff now
-        GlobalVariables.global.postProcessing.enabled = currentOptions[0];
-        GlobalVariables.global.postProcessLayer.enabled = currentOptions[0];
-        GlobalVariables.global.analogGlitch.enabled = currentOptions[1];
-        GlobalVariables.global.digitalGlitch.enabled = currentOptions[1];
-        GlobalVariables.global.copyright.gameObject.SetActive(currentOptions[2]);
-        #if UNITY_ANDROID
-        GlobalVariables.global.joystick.gameObject.SetActive(currentOptions[3]);
-        #endif
-        //continue after more settings are added
+        Settings.Initialize();
     }
     public void ResetSettings()
     {

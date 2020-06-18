@@ -1,8 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+/// <summary>This is used to flash text in Global. It can be used anywhere.
+/// <para>This is a MonoBehaviour class. </para> 
+/// </summary>
 public class TextFlasher : MonoBehaviour
 {
     public TextMeshProUGUI text;

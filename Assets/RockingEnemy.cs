@@ -1,9 +1,9 @@
-﻿//SOMETHING WAS NOT DATA FOR FILE
-//no but seriously this file is broken don't use it
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-
+/// <summary>This is a broken BaseEnemy derivative, supposed to rock back and forth.
+/// <para>This is a MonoBehaviour class based on BaseEnemy. </para>
+/// <seealso cref="BaseEnemy"/>
+/// </summary>
 public class RockingEnemy : BaseEnemy
 {
     public Vector3 force = Vector3.zero;

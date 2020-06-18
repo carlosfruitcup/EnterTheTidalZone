@@ -1,7 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>This is what makes time travel possible. It reverses its Transform movement when GlobalVariables.rewindTime is true.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="PointInTime"/> 
+/// </summary>
 public class TimeBody : MonoBehaviour {
     public bool isSpongebob = false;
 	bool isRewinding = false;

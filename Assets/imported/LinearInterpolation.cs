@@ -1,8 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+/// <summary>Imported from an earlier project. Do not use this, it's also unused.
+/// <para>This is a MonoBehaviour class. </para>
+/// </summary>
 public class LinearInterpolation : MonoBehaviour
 {
     public bool rectTransform = false;

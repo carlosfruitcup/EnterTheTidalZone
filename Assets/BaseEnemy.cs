@@ -1,8 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+/// <summary>This is used for enemies to share code with each other, it is not an enemy type.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="SpongeBob"/> 
+/// </summary>
 public class BaseEnemy : MonoBehaviour
 {
     public bool destroyOnDeath = true;

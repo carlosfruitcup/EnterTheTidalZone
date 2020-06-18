@@ -1,39 +1,77 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
-public class MoveEnemy1 : MonoBehaviour // change to MonoBehaviour' to 'BaseEnemy' whenever possible
+/// <summary>This is used as an enemy type known as the 'Bolter'. It slides back and forth and destroys itself upon hurting the player.
+/// <para>This is a BaseEnemy class. </para>
+/// <seealso cref="BaseEnemy"/> 
+/// </summary>
+public class MoveEnemy1 : BaseEnemy
 {
-	public int distance;
-	private int tracker;
-	private int negative;
-	private bool lorr;
-
-    // Start is called before the first frame update
-    void Start()
+	public float benefitOfTheDoubtSeconds = 0.1f;
+	public float thrust = 1.0f;
+    public Rigidbody rb;
+	public bool direction = false; //false = left
+	private bool benefitOfTheDoubt = false;
+    public override void Awake()
     {
-		transform.position = new Vector3(1.0f, 1.0f, 1.0f);
-		tracker = distance;
-		negative = distance - distance * 2;
-		lorr = true;
-		transform.position = transform.position + new Vector3(-16, -15, -5);
+		//BASE
+		timeBody = GetComponent<TimeBody>();
+		//END BASE
+        rb = GetComponent<Rigidbody>();
     }
-
     // Update is called once per frame
-    void Update()
+    public void FixedUpdate()
     {
-        if(tracker == 0){
-			lorr = !lorr;
-			tracker = distance;
-		} else {
-			if(lorr){
-				transform.Translate(Vector3.right * distance);
-				tracker--;
-			} else {
-				transform.Translate(Vector3.right * negative);
-				tracker--;
-			}
+		Vector3 dir;
+		if(direction)
+		{
+			dir = transform.right;
+			transform.localScale = new Vector3(0.25f,0.25f,0.25f);
+		}
+		else
+		{
+			dir = transform.right*-1;
+			transform.localScale = new Vector3(-0.25f,0.25f,0.25f);
+		}
+		rb.AddForce(dir * thrust);
+    }
+	void OnCollisionEnter(Collision col)
+	{
+		if(col.gameObject.layer == 10 && !benefitOfTheDoubt) //wall layer
+		{
+			benefitOfTheDoubt = true;
+			direction = !direction;
+			StartCoroutine(WaitForIt());
+		}
+		else if(col.gameObject.name.EndsWith("Spongebob"))
+		{
+			SpongeBob spongeBob = col.gameObject.GetComponent<SpongeBob>();
+			if(!spongeBob.invincible)
+            {
+                spongeBob.health -= damage;
+                onDamage.Invoke();
+				health = 0;
+            }
 		}
     }
+	void OnCollisionStay(Collision col) //in case
+	{
+		if(col.gameObject.name.EndsWith("Spongebob"))
+		{
+			SpongeBob spongeBob = col.gameObject.GetComponent<SpongeBob>();
+			if(!spongeBob.invincible)
+            {
+                spongeBob.health -= damage;
+                onDamage.Invoke();
+				health = 0;
+            }
+		}
+	}
+	IEnumerator WaitForIt()
+	{
+		if(benefitOfTheDoubt)
+		{
+			yield return new WaitForSeconds(benefitOfTheDoubtSeconds);
+			benefitOfTheDoubt = false;
+		}
+	}
 }

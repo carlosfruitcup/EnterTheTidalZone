@@ -1,9 +1,12 @@
 ﻿//Original Scripts by IIColour (IIColour_Spectrum)
-
+//Modified from original
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+/// <summary>This is used in Global to fade in and out the screen when needed.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="GlobalVariables"/>
+/// </summary>
 public class ScreenFade : MonoBehaviour
 {
     public static ScreenFade main;

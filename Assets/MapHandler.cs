@@ -1,9 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
-
+/// <summary>This is used in Global for the map/checklist screen, not to be used elsewhere.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="GlobalVariables"/> 
+/// </summary>
 public class MapHandler : MonoBehaviour
 {
     public DialogHandler dialog;

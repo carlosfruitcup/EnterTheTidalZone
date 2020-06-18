@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-
-// This script moves the character controller forward
-// and sideways based on the arrow keys.
-// It also jumps when pressing space.
-// Make sure to attach a character controller to the same game object.
-// It is recommended that you make only one call to Move or SimpleMove per frame.
-
+/// <summary>Used for the main character to move and interact with the environment, enemies, etc.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="BaseEnemy"/>
+/// </summary>
 public class SpongeBob : MonoBehaviour
 {
     CharacterController characterController;
@@ -141,7 +138,8 @@ public class SpongeBob : MonoBehaviour
         }
     }
 	public void jump(){
-       isJumping = true;
+        if(!GlobalVariables.global.busy)
+            isJumping = true;
 	}
     IEnumerator Invincible()
     {
@@ -177,10 +175,10 @@ public class SpongeBob : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit col)
     {
         //Debug.Log(col.gameObject.name);
-        if(col.transform.tag == "Enemy")
+        if(col.transform.tag == "Enemy") //generic enemy, not for long term use
         {
             BaseEnemy enemy = col.gameObject.GetComponent<BaseEnemy>();
-            if(!invincibleStarted)
+            if(!invincible)
             {
                 health -= enemy.damage;
                 enemy.onDamage.Invoke();

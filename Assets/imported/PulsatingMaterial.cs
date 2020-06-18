@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+/// <summary>Imported from an earlier project. This pulsates a material's color to make it less boring.
+/// <para>This is a MonoBehaviour class. </para>
+/// </summary>
 public class PulsatingMaterial : MonoBehaviour
 {
     public float FadeDuration = 2.5f;

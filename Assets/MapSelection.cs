@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+/// <summary>This is used in Global for selecting a checkbox in the checklist screen, not to be used elsewhere.
+/// <para>This is a class based on MonoBehaviour, IPointerEnterHandler and IPointerExitHandler. </para>
+/// <seealso cref="GlobalVariables"/> 
+/// </summary>
 public class MapSelection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool active = false;

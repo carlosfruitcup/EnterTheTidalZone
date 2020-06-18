@@ -533,12 +533,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1379,8 +1379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2391}
-  m_SizeDelta: {x: 890.9526, y: 1815}
+  m_AnchoredPosition: {x: 0, y: -2571.1}
+  m_SizeDelta: {x: 890.9526, y: 1998.0112}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4216568382818849108
 CanvasRenderer:
@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 825
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1503,13 +1503,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.9456177, w: 0}
   m_textInfo:
     textComponent: {fileID: 5084576879923651189}
-    characterCount: 0
+    characterCount: 933
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 120
+    wordCount: 126
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 49
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1848,7 +1848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6975293709260012445
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1866,9 +1866,9 @@ RectTransform:
   m_Father: {fileID: 3170146562292809473}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -118.22305, y: -0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -118.22305, y: -19.10004}
   m_SizeDelta: {x: 235.54999, y: 38.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2489759934116509941
@@ -2685,9 +2685,9 @@ RectTransform:
   m_Father: {fileID: 3170146562292809473}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -118.22301, y: -19.100037}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -118.22301, y: 0}
   m_SizeDelta: {x: 235.54999, y: 38.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3467808574025596813
@@ -3204,10 +3204,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.9456177, w: 0}
   m_textInfo:
     textComponent: {fileID: 8703215017083307553}
-    characterCount: 312
+    characterCount: 285
     spriteCount: 0
-    spaceCount: 51
-    wordCount: 54
+    spaceCount: 46
+    wordCount: 47
     linkCount: 0
     lineCount: 4
     pageCount: 1
@@ -5507,6 +5507,7 @@ GameObject:
   - component: {fileID: 4297344109036541137}
   - component: {fileID: 6531960202761457831}
   - component: {fileID: 5471482445843509641}
+  - component: {fileID: 3818969778898713209}
   m_Layer: 5
   m_Name: Global
   m_TagString: Untagged
@@ -5664,6 +5665,18 @@ MonoBehaviour:
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &5471482445843509641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660023646500268804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90976be834cfecd4680ef4d0dee50dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3818969778898713209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7384,7 +7397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Particles
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80bfd4fb963967243a818d7150c541e9, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 80bfd4fb963967243a818d7150c541e9, type: 2}
@@ -7453,7 +7466,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.9456177, w: 0}
   m_textInfo:
     textComponent: {fileID: 2735757281154681674}
-    characterCount: 8
+    characterCount: 9
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -7953,7 +7966,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &7132923454714533183
 GameObject:
   m_ObjectHideFlags: 0
@@ -8242,8 +8255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9691ec42a63644f44bdf27f556c67c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentOptions: 010101010000
-  defaultOptions: 010101010000
+  currentOptions: 010101010100
+  defaultOptions: 010101010100
   checkmarks:
   - {fileID: 9003617517468206959}
   - {fileID: 8234800428486626991}
@@ -9053,6 +9066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3170146562292809473}
+  - component: {fileID: 1964988688641298104}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -9085,6 +9099,19 @@ RectTransform:
   m_AnchoredPosition: {x: -0.16, y: 1.71}
   m_SizeDelta: {x: 539.48, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1964988688641298104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162210730278298274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c27252735c853e4f8f262bda155a80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: '''Option (3)'' and ''Option (4)'' swapped places.'
 --- !u!1 &8792100215794359340
 GameObject:
   m_ObjectHideFlags: 0

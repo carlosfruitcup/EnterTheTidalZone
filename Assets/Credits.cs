@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+/// <summary>This is used in Global for the credit roll, not to be used elsewhere.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="GlobalVariables"/> 
+/// </summary>
 public class Credits : MonoBehaviour
 {
     public float originalY = -2391f;

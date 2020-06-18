@@ -1,10 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using TMPro;
-
+/// <summary>This is used in Global, it is used for triggering dialog boxes from anywhere.
+/// <para>This is a MonoBehaviour class. </para>
+/// <seealso cref="GlobalVariables"/>
+/// </summary>
 public class DialogHandler : MonoBehaviour
 
 {
