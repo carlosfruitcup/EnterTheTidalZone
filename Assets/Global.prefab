@@ -4262,6 +4262,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1239715806761916414}
+        m_MethodName: FadePauseDisablers
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &4603835000026706562
 Animator:
   serializedVersion: 3
@@ -5506,6 +5517,7 @@ GameObject:
   - component: {fileID: 6531960202761457831}
   - component: {fileID: 5471482445843509641}
   - component: {fileID: 3818969778898713209}
+  - component: {fileID: 1239715806761916414}
   m_Layer: 5
   m_Name: Global
   m_TagString: Untagged
@@ -5568,6 +5580,7 @@ MonoBehaviour:
   postProcessing: {fileID: 0}
   postProcessLayer: {fileID: 0}
   joystick: {fileID: 0}
+  bgmHandler: {fileID: 0}
 --- !u!223 &5660023646500268811
 Canvas:
   m_ObjectHideFlags: 0
@@ -5686,6 +5699,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90976be834cfecd4680ef4d0dee50dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1239715806761916414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660023646500268804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99bc96553dd4ed842a99107142f95c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracks: []
+  pauseDisablers: 
+  trimTreshhold: 0.5
+  loop: 1
+  playOnAwake: 0
+  trackSources: []
+  trackSources2: []
 --- !u!1 &5660023647085778627
 GameObject:
   m_ObjectHideFlags: 0
@@ -7797,6 +7829,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 5660023646500268807}
         m_MethodName: PauseTime
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1239715806761916414}
+        m_MethodName: FadePauseDisablers
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

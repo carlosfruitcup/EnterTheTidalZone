@@ -58,3 +58,21 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# VEGAS generated files
+*.sfl
+*.sfk
+*.veg
+*.veg.bak
+*.sfl.meta
+*.sfk.meta
+*.veg.meta
+*.veg.bak.meta
+
+# FL Studio project files
+*.flp
+*.flp.meta
+
+# Music stem sources
+* - *.mp3
+* - *.mp3.meta

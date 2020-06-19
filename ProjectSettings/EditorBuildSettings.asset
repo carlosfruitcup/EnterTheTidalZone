@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/title.unity
-    guid: d69bd9a2ed1287646a1c4823f7ff588f
+    path: Assets/newtitle.unity
+    guid: 46871eebad63cf24896e6b4bd16b31a9
   - enabled: 1
     path: Assets/nefarious_realm.unity
     guid: 510a276aa3fcdfe488c536b2e6d33623

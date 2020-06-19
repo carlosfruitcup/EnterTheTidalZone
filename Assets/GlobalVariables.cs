@@ -23,6 +23,7 @@ public class GlobalVariables : MonoBehaviour
     public PostProcessVolume postProcessing;
     public PostProcessLayer postProcessLayer;
     public LeftJoystick joystick;
+    public BgmHandler bgmHandler;
     void Update()
     {
         if(!busy)
@@ -34,6 +35,7 @@ public class GlobalVariables : MonoBehaviour
                     pauseHandler.SetActive(true);
                     busy = true;
                     PauseTime(true);
+                    bgmHandler.FadePauseDisablers(true);
                 }
                 /*else if(Input.GetKeyDown(KeyCode.Return))
                 {
@@ -48,6 +50,7 @@ public class GlobalVariables : MonoBehaviour
             PauseTime(false);
             pauseHandler.SetActive(false);
             busy = false;
+            bgmHandler.FadePauseDisablers(false);
         }
     }
     void Awake()
@@ -61,6 +64,7 @@ public class GlobalVariables : MonoBehaviour
             settingsHandler = transform.Find("Settings").GetComponent<SettingsHandler>();
             copyright = transform.Find("Text").GetComponent<TextMeshProUGUI>();
             joystick = transform.Find("GameButtons").Find("Left Joystick").GetComponent<LeftJoystick>();
+            bgmHandler = GetComponent<BgmHandler>();
             #if UNITY_ANDROID
             Debug.Log("Android");
             #else
@@ -68,7 +72,8 @@ public class GlobalVariables : MonoBehaviour
             transform.Find("GameButtons").Find("Jump").gameObject.SetActive(false);
             #endif
             if(!isIntro) {
-                music = GameObject.Find("DontDestroy").GetComponent<AudioSource>();
+                GameObject musicGo = GameObject.Find("DontDestroy");
+                if(musicGo) music = musicGo.GetComponent<AudioSource>();
                 digitalGlitch = GameObject.FindWithTag("MainCamera").GetComponent<DigitalGlitch>();
                 analogGlitch = GameObject.FindWithTag("MainCamera").GetComponent<AnalogGlitch>();
                 postProcessing = GameObject.FindWithTag("Post Processing").GetComponent<PostProcessVolume>();
@@ -123,8 +128,11 @@ public class GlobalVariables : MonoBehaviour
     {
         foreach(ParticleSystem particles in Resources.FindObjectsOfTypeAll<ParticleSystem>())
         {
+            /*
             if(toggle) particles.Play();
             else particles.Stop();
+            */
+            particles.gameObject.SetActive(toggle);
         }
     }
 }
