@@ -5,21 +5,24 @@
 /// </summary>
 public class Credits : MonoBehaviour
 {
-    public float originalY = -2391f;
     public float speed;
+    public float anchorTop = 10f;
     private RectTransform credits;
-    private Vector2 destination;
 
     public void Scroll()
     {
         credits = GetComponent<RectTransform>();
-        credits.anchoredPosition = new Vector2(credits.anchoredPosition.x,originalY);
-        destination = new Vector2(credits.anchoredPosition.x,0f);
+        credits.anchoredPosition = Vector2.zero;
+        credits.anchorMax = new Vector2(0.5f,0f);
+        credits.anchorMin = credits.anchorMax;
     }
 
     // Update is called once per frame
     void Update()
     {
-        credits.anchoredPosition = Vector2.Lerp(credits.anchoredPosition,destination,speed);
+        credits.anchorMax = new Vector2(0.5f,Mathf.Lerp(credits.anchorMax.y,anchorTop,speed));
+        credits.anchorMin = credits.anchorMax;
+        if(credits.anchorMax.y >= (anchorTop/2))
+            credits.anchorMax = new Vector2(0.5f,0f);
     }
 }

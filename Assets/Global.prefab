@@ -1377,11 +1377,11 @@ RectTransform:
   m_Father: {fileID: 8149677873356066906}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2571.1}
-  m_SizeDelta: {x: 890.9526, y: 1998.0112}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 890.9526, y: 4250}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4216568382818849108
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1402,8 +1402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0764884d2266c864aa6873c39b548b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalY: -2571.1
-  speed: 0.00025
+  speed: 0.00015
+  anchorTop: 10
 --- !u!114 &5084576879923651189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1423,16 +1423,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\"Enter the Tidal Zone\"\r\nhttps://github.com/Tidal-Members/EnterTheTidalZone\r\n\r\nA
-    collaborative effort by these wonderful people:\r\nerin\r\nKevin \"Kevster\"
-    V\r\nStickGamesStudio\r\nJust Doctor_Peppermint \r\nAnthony Hampton\r\nChase
-    \u201CMagma\u201D Ferrell\r\nThe Noise\r\nJackzGamesYT\r\nDex Stepeck\r\nGracidea\r\nPrivatePenguin12\r\nIan
-    Fox\r\nPumpkin_boii\r\nSkullaton\r\nokay.\r\nCarter\r\nnuppington#6384\r\nErrorwolf\r\nTypical
-    Cheems\nDave_Nep \r\nmadboi214\nwichealda\nZanyeWeast\u200B\n\r\nUnder the advisory
-    of TeamPopplio\r\nhttps://github.com/TeamPopplio/\r\n\r\nSpecial thanks to the
-    Discord moderators:\r\nerin\r\nKevin \"Kevster\" V\r\nIan Fox\r\nTypical Cheems\nDave_Nep\nZanyeWeast\u200B\n\r\nCredits
+  m_text: "\"Enter the Tidal Zone\"\r\nA collaborative effort.\r\nhttps://github.com/Tidal-Members/EnterTheTidalZone\r\n\nDirected
+    by TeamPopplio\r\nhttps://github.com/TeamPopplio/\r\n\nThese individuals helped
+    make this project possible:\n\nModerators:\nerin\r\nKevin \"Kevster\" V\r\nIan
+    Fox\r\nTypical Cheems\nDave_Nep\nZanyeWeast\u200B\n\nProgrammers:\nnuppington#6384\r\n\nArtists:\nJackzGamesYT\r\n\nComposers:\nAnthony
+    Hampton\r\n\nUnknown:\nStickGamesStudio\r\nJust Doctor_Peppermint \r\nChase \u201CMagma\u201D
+    Ferrell\r\nThe Noise\r\nDex Stepeck\r\nGracidea\r\nPrivatePenguin12\r\nPumpkin_boii\r\nSkullaton\r\nokay.\r\nCarter\r\nErrorwolf\r\nmadboi214\nwichealda\n\r\nCredits
     above are subject to change.\r\n\r\nAttributed credits can be viewed in the file
-    'README.md' on the GitHub repository linked above.\r\n\r\nDISCLAIMER\r\nThis
+    'ATTRIBUTED.md' on the GitHub repository linked above.\r\n\r\nDISCLAIMER\r\nThis
     work is a parody and is not affiliated with Viacom, Nickelodeon or any associated
     intellectual properties. All rights belong to their respective owners."
   m_isRightToLeft: 0
@@ -1469,7 +1467,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 514
+  m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1477,9 +1475,9 @@ MonoBehaviour:
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
+  m_wordWrappingRatios: 0.121
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 825
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1503,12 +1501,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.9456177, w: 0}
   m_textInfo:
     textComponent: {fileID: 5084576879923651189}
-    characterCount: 933
+    characterCount: 894
     spriteCount: 0
-    spaceCount: 120
-    wordCount: 126
+    spaceCount: 113
+    wordCount: 115
     linkCount: 0
-    lineCount: 49
+    lineCount: 53
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

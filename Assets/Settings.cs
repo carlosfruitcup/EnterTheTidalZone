@@ -11,6 +11,17 @@ public static class Settings
     }
     public static void Initialize()
     {
+        if(!Common.IntToBool(PlayerPrefs.GetInt("firstlaunch")))
+        {
+            Debug.Log("first time launch");
+            PlayerPrefs.SetInt("firstlaunch",1);
+            PlayerPrefs.SetInt("option0",1);
+            PlayerPrefs.SetInt("option1",1);
+            PlayerPrefs.SetInt("option2",1);
+            PlayerPrefs.SetInt("option3",1);
+            PlayerPrefs.SetInt("option4",1);
+            //PlayerPrefs.SetInt("option5",1);
+        }
         GlobalVariables.global.postProcessing.enabled = GetSetting(0);
         GlobalVariables.global.postProcessLayer.enabled = GetSetting(0);
         GlobalVariables.global.analogGlitch.enabled = GetSetting(1);
