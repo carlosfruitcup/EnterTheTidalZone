@@ -376,7 +376,7 @@ PrefabInstance:
     - target: {fileID: 5660023647357618972, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: nefarious_realm
+      value: loading
       objectReference: {fileID: 0}
     - target: {fileID: 5660023647456430882, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
