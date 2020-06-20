@@ -9,8 +9,8 @@ public class SpongeBob : MonoBehaviour
 {
     CharacterController characterController;
 
-    public Vector3 scaleToUse = new Vector3(-1.265f,1.265f,1);
-    public Vector3 scaleToUse2 = new Vector3(1.265f,1.265f,1);
+    public Vector3 scaleToUse = new Vector3(-1.265f, 1.265f, 1);
+    public Vector3 scaleToUse2 = new Vector3(1.265f, 1.265f, 1);
     public float speed = 6.0f;
     public float sprintSpeed = 12f;
     public float jumpSpeed = 8.0f;
@@ -29,27 +29,28 @@ public class SpongeBob : MonoBehaviour
     private bool dying = false;
     public SpriteRenderer[] sprites;
     public SpriteRenderer eyes;
-	Animator m_Animator;
+    Animator m_Animator;
 
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         ogSpeed = speed;
-		m_Animator = gameObject.GetComponent<Animator>();
-        if(eyes)
+        m_Animator = gameObject.GetComponent<Animator>();
+        if (eyes)
             StartCoroutine(Blinking());
     }
-	
-	public void cheat(){
-		invincible = true;
-	}
+
+    public void cheat()
+    {
+        invincible = true;
+    }
     void Update()
     {
-        if(health > 0)
+        if (health > 0)
         {
-            if(health < healthBefore)
+            if (health < healthBefore)
             {
-                if(invincible)
+                if (invincible)
                     health = healthBefore;
                 else
                 {
@@ -58,16 +59,16 @@ public class SpongeBob : MonoBehaviour
                 }
             }
             healthBefore = health;
-            if(invincible && !invincibleStarted)
+            if (invincible && !invincibleStarted)
             {
                 Debug.Log("now invincible");
                 StartCoroutine(Invincible());
                 invincibleCounter = 200;
             }
-            if(invincibleCounter > 0)
+            if (invincibleCounter > 0)
             {
                 invincibleCounter -= 1;
-                if(invincibleCounter == 0)
+                if (invincibleCounter == 0)
                     invincible = false;
             }
             else
@@ -75,25 +76,28 @@ public class SpongeBob : MonoBehaviour
                 invincible = false;
             }
             float direction;
-            if(GlobalVariables.global.joystick.gameObject.activeSelf)
+            if (GlobalVariables.global.joystick.gameObject.activeSelf)
                 direction = GlobalVariables.global.joystick.GetInputDirection().x;
             else
                 direction = Input.GetAxis("Horizontal");
-			if(direction != 0){
-				m_Animator.SetBool("walk", true);
-			} else {
-				m_Animator.SetBool("walk", false);
-			}
-            //if(direction != 0) Debug.Log(direction);
-            if(!GlobalVariables.global.busy)
+            if (direction != 0)
             {
-                if(direction < 0)
+                m_Animator.SetBool("walk", true);
+            }
+            else
+            {
+                m_Animator.SetBool("walk", false);
+            }
+            //if(direction != 0) Debug.Log(direction);
+            if (!GlobalVariables.global.busy)
+            {
+                if (direction < 0)
                 {
                     transform.localScale = scaleToUse;
                     transform.Find("body").gameObject.SetActive(false);
                     flipped = true;
                 }
-                else if(direction > 0)
+                else if (direction > 0)
                 {
                     transform.localScale = scaleToUse2;
                     transform.Find("body").gameObject.SetActive(true);
@@ -101,7 +105,7 @@ public class SpongeBob : MonoBehaviour
                 }
                 if (characterController.isGrounded)
                 {
-                    if (Input.GetButton("Sprint"))    
+                    if (Input.GetButton("Sprint"))
                         speed = sprintSpeed;
                     else
                         speed = ogSpeed;
@@ -110,12 +114,17 @@ public class SpongeBob : MonoBehaviour
                     moveDirection = new Vector3(direction, 0.0f, 0f); //Input.GetAxis("Vertical"));
                     moveDirection *= speed;
 
-                    if (Input.GetButton("Jump"))    
+                    if (Input.GetButton("Jump"))
                         isJumping = true;
-                    if(isJumping && allowJump)
+                    if (isJumping && allowJump)
                     {
                         moveDirection.y = jumpSpeed;
                         isJumping = false;
+                        m_Animator.SetBool("jump", true);
+                    } 
+                    else
+                    {
+                        m_Animator.SetBool("jump", false);
                     }
                 }
             }
@@ -125,19 +134,20 @@ public class SpongeBob : MonoBehaviour
             moveDirection.y -= gravity * Time.deltaTime;
 
             //don't get stuck out of bounds
-            if(transform.position.z != zPosition)
+            if (transform.position.z != zPosition)
             {
                 moveDirection.z = (zPosition - transform.position.z);
             }
-            if(characterController.enabled)
+            if (characterController.enabled)
                 characterController.Move(moveDirection * Time.deltaTime);
         }
-        else if(!dying)
+        else if (!dying)
         {
             StartCoroutine(Death());
         }
     }
-	public void jump(){
+    public void jump()
+    {
         if (!GlobalVariables.global.busy)
         {
             isJumping = true;
@@ -145,28 +155,33 @@ public class SpongeBob : MonoBehaviour
             {
                 moveDirection.y = jumpSpeed;
                 isJumping = false;
+                m_Animator.SetBool("jump", true);
+            }
+            else
+            {
+                m_Animator.SetBool("jump", false);
             }
         }
-	}
+    }
     IEnumerator Invincible()
     {
         invincibleStarted = true;
-        while(invincible)
+        while (invincible)
         {
             yield return new WaitForSeconds(0.15f);
-            for(int i=0;i < sprites.Length; i++)
+            for (int i = 0; i < sprites.Length; i++)
             {
                 sprites[i].color = Color.clear;
             }
             yield return new WaitForSeconds(0.15f);
-            for(int i=0;i < sprites.Length; i++)
+            for (int i = 0; i < sprites.Length; i++)
             {
-                if(sprites[i].name != "eyes")
+                if (sprites[i].name != "eyes")
                     sprites[i].color = Color.gray;
                 else sprites[i].color = Color.white; //remove this and his eyes will be blinking during invincibility
             }
         }
-        for(int i=0;i < sprites.Length; i++)
+        for (int i = 0; i < sprites.Length; i++)
         {
             sprites[i].color = Color.white;
         }
@@ -182,10 +197,10 @@ public class SpongeBob : MonoBehaviour
     void OnControllerColliderHit(ControllerColliderHit col)
     {
         //Debug.Log(col.gameObject.name);
-        if(col.transform.tag == "Enemy") //generic enemy, not for long term use
+        if (col.transform.tag == "Enemy") //generic enemy, not for long term use
         {
             BaseEnemy enemy = col.gameObject.GetComponent<BaseEnemy>();
-            if(!invincible)
+            if (!invincible)
             {
                 health -= enemy.damage;
                 enemy.onDamage.Invoke();
@@ -194,7 +209,7 @@ public class SpongeBob : MonoBehaviour
     }
     IEnumerator Blinking()
     {
-        while(true)
+        while (true)
         {
             eyes.gameObject.SetActive(true);
             yield return new WaitForSeconds(2.5f);
