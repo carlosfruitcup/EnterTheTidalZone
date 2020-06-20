@@ -16,7 +16,7 @@ PlayerSettings:
   productName: Enter the Tidal Zone
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.8039216, g: 0.8039216, b: 0.8039216, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.14901961, g: 0.14901961, b: 0.14901961, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1

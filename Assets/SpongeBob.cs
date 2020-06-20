@@ -139,12 +139,14 @@ public class SpongeBob : MonoBehaviour
     }
 	public void jump(){
         if (!GlobalVariables.global.busy)
+        {
             isJumping = true;
             if (isJumping && allowJump)
             {
                 moveDirection.y = jumpSpeed;
                 isJumping = false;
             }
+        }
 	}
     IEnumerator Invincible()
     {

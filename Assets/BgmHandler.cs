@@ -88,6 +88,27 @@ public class BgmHandler : MonoBehaviour
             }
         }
     }
+    public void Stop()
+    {
+        for(int i=0;i < trackSources.Length;i++)
+        {
+            trackSources[i].Stop();
+        }
+    }
+    public void Pause()
+    {
+        for(int i=0;i < trackSources.Length;i++)
+        {
+            trackSources[i].Pause();
+        }
+    }
+    public void UnPause()
+    {
+        for(int i=0;i < trackSources.Length;i++)
+        {
+            trackSources[i].UnPause();
+        }
+    }
     private IEnumerator FadeOut(AudioSource source)
     {
         while(source.volume > 0)

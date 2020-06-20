@@ -15,7 +15,6 @@ public class GlobalVariables : MonoBehaviour
     public ScreenFade fadeHandler;
     public MapHandler mapHandler;
     public GameObject pauseHandler;
-    public AudioSource music;
     public SettingsHandler settingsHandler;
     public TextMeshProUGUI copyright;
     public DigitalGlitch digitalGlitch;
@@ -72,8 +71,6 @@ public class GlobalVariables : MonoBehaviour
             transform.Find("GameButtons").Find("Jump").gameObject.SetActive(false);
             #endif
             if(!isIntro) {
-                GameObject musicGo = GameObject.Find("DontDestroy");
-                if(musicGo) music = musicGo.GetComponent<AudioSource>();
                 digitalGlitch = GameObject.FindWithTag("MainCamera").GetComponent<DigitalGlitch>();
                 analogGlitch = GameObject.FindWithTag("MainCamera").GetComponent<AnalogGlitch>();
                 postProcessing = GameObject.FindWithTag("Post Processing").GetComponent<PostProcessVolume>();
@@ -116,8 +113,8 @@ public class GlobalVariables : MonoBehaviour
     }
     public void MusicMute(bool mute)
     {
-        if(mute) music.Pause();
-        else music.UnPause();
+        if(mute) bgmHandler.Pause();
+        else bgmHandler.UnPause();
     }
     public void PauseTime(bool toggle)
     {
