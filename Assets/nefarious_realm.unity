@@ -242,47 +242,47 @@ PrefabInstance:
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: pauseDisablers.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: tracks.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 2618a5de4690ec449b1e57a720b747da, type: 3}
+      objectReference: {fileID: 8300000, guid: 6a50547d3e6dc344fbeb3f5e10fc7d85, type: 3}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: tracks.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 04997052725df0b4a9851e86342cdb53, type: 3}
+      objectReference: {fileID: 8300000, guid: 36fdfb50a45108c4791ba9ee7df01a1d, type: 3}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: tracks.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: b8318631c01a72c40b2c22440f7aee5d, type: 3}
+      objectReference: {fileID: 8300000, guid: 535f99fd202b8fc43b072b5d2bedb48f, type: 3}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: tracks.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 902a5443d77866941972ae2c129f2064, type: 3}
+      objectReference: {fileID: 8300000, guid: aa7edc76758be1a43ac046cbd4f09fae, type: 3}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: tracks.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: f07424ce231795547b9fec2e1d3b315a, type: 3}
+      objectReference: {fileID: 8300000, guid: 7f87640e4686f70449d1b54b585be7c6, type: 3}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: tracks.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: 0dde7587a66cced4eaa7e46986f5c8ca, type: 3}
+      objectReference: {fileID: 8300000, guid: e44963df24f14e845a47a8aba32c4b7c, type: 3}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: pauseDisablers.Array.data[0]
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: pauseDisablers.Array.data[1]
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
@@ -292,7 +292,17 @@ PrefabInstance:
     - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: pauseDisablers.Array.data[2]
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
+        type: 3}
+      propertyPath: pauseDisablers.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239715806761916414, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
+        type: 3}
+      propertyPath: pauseDisablers.Array.data[4]
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1689850659585823506, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
