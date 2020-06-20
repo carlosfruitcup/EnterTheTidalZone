@@ -294,6 +294,16 @@ PrefabInstance:
       propertyPath: pauseDisablers.Array.data[2]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1689850659585823506, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1689850659585823506, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 2714830077681547948, guid: 41e440c5ee2f78e4e9ff0036b76ff825,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
