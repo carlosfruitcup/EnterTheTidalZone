@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System;
 /// <summary>This is used as an enemy type known as the 'Bolter'. It slides back and forth and destroys itself upon hurting the player.
 /// <para>This is a BaseEnemy class. </para>
 /// <seealso cref="BaseEnemy"/> 
@@ -47,7 +48,7 @@ public class MoveEnemy1 : BaseEnemy
 			SpongeBob spongeBob = col.gameObject.GetComponent<SpongeBob>();
 			if(!spongeBob.invincible)
             {
-                spongeBob.health -= damage;
+				spongeBob.health -= damage;
                 onDamage.Invoke();
 				health = 0;
             }
