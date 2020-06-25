@@ -151,16 +151,6 @@ public class SpongeBob : MonoBehaviour
         if (!GlobalVariables.global.busy)
         {
             isJumping = true;
-            if (isJumping && allowJump)
-            {
-                moveDirection.y = jumpSpeed;
-                isJumping = false;
-                m_Animator.SetBool("jump", true);
-            }
-            else
-            {
-                m_Animator.SetBool("jump", false);
-            }
         }
     }
     IEnumerator Invincible()
