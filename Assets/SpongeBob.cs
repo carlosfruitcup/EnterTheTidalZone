@@ -44,6 +44,8 @@ public class SpongeBob : MonoBehaviour
     {
         invincible = true;
     }
+    
+ 
     void Update()
     {
         if (health > 0)
@@ -120,13 +122,9 @@ public class SpongeBob : MonoBehaviour
                     {
                         moveDirection.y = jumpSpeed;
                         isJumping = false;
-                        m_Animator.SetBool("jump", true);
+                        m_Animator.Play("Base Layer.jump", 0, 0f);
                     } 
-                    else
-                    {
-                        m_Animator.SetBool("jump", false);
-                    }
-                }
+                } 
             }
             // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
             // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
