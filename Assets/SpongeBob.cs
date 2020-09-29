@@ -14,6 +14,7 @@ public class SpongeBob : MonoBehaviour
     public float speed = 6.0f;
     public float sprintSpeed = 12f;
     public float jumpSpeed = 8.0f;
+    public float jumpDirection;
     public float gravity = 20.0f;
     public bool flipped = false;
     public bool allowJump = false;
@@ -27,6 +28,7 @@ public class SpongeBob : MonoBehaviour
     private bool invincibleStarted = false;
     private int invincibleCounter = 0;
     private bool dying = false;
+    private float jumpCounter;
     public SpriteRenderer[] sprites;
     public SpriteRenderer eyes;
     Animator m_Animator;
@@ -105,26 +107,27 @@ public class SpongeBob : MonoBehaviour
                     transform.Find("body").gameObject.SetActive(true);
                     flipped = false;
                 }
+                if (Input.GetButton("Sprint"))
+                    speed = sprintSpeed;
+                else
+                    speed = ogSpeed;
+                // We are grounded, so recalculate
+                // move direction directly from axes
+                moveDirection = new Vector3(direction, jumpDirection*jumpCounter, 0f); //Input.GetAxis("Vertical"));
+                jumpCounter-=0.25f;
                 if (characterController.isGrounded)
                 {
-                    if (Input.GetButton("Sprint"))
-                        speed = sprintSpeed;
-                    else
-                        speed = ogSpeed;
-                    // We are grounded, so recalculate
-                    // move direction directly from axes
-                    moveDirection = new Vector3(direction, 0.0f, 0f); //Input.GetAxis("Vertical"));
-                    moveDirection *= speed;
-
                     if (Input.GetButton("Jump"))
                         isJumping = true;
                     if (isJumping && allowJump)
                     {
-                        moveDirection.y = jumpSpeed;
+                        jumpDirection = jumpSpeed;
+                        jumpCounter = 5f;
                         isJumping = false;
                         m_Animator.Play("Base Layer.jump", 0, 0f);
-                    } 
+                    }
                 } 
+                moveDirection *= speed;
             }
             // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
             // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
