@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/button.mp3-c63ae832d57ff9f2156c955650704be2.mp3str"
+
+[deps]
+
+source_file="res://Assets/ssfx/button.mp3"
+dest_files=[ "res://.import/button.mp3-c63ae832d57ff9f2156c955650704be2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

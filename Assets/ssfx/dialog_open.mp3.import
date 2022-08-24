@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dialog_open.mp3-eb544a56b31bfe39dc969a4d72a348b4.mp3str"
+
+[deps]
+
+source_file="res://Assets/ssfx/dialog_open.mp3"
+dest_files=[ "res://.import/dialog_open.mp3-eb544a56b31bfe39dc969a4d72a348b4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

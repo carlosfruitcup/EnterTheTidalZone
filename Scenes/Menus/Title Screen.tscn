@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/images/artstyle/stars.png" type="Texture" id=1]
+[ext_resource path="res://Assets/images/logos/tidalzone.png" type="Texture" id=2]
+[ext_resource path="res://Assets/bgm/NR_Theme.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Shaders/Glitch.gdshader" type="Shader" id=4]
+[ext_resource path="res://Scenes/Menus/Credits.gd" type="Script" id=5]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+background_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+dof_blur_far_distance = 100.0
+dof_blur_far_quality = 0
+glow_enabled = true
+glow_intensity = 0.3
+glow_strength = 0.91
+glow_bloom = 0.2
+glow_blend_mode = 1
+
+[sub_resource type="SpatialMaterial" id=5]
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 44.36
+spread = 16.04
+gravity = Vector3( 0, 0, 100 )
+angle = 720.0
+angle_random = 1.0
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_transparent = true
+flags_unshaded = true
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=4]
+material = SubResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 4 )
+shader_param/shake_power = 0.03
+shader_param/shake_rate = 0.1
+shader_param/shake_speed = 5.0
+shader_param/shake_block_size = 30.5
+shader_param/shake_color_rate = 0.01
+
+[node name="Title Screen" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+environment = SubResource( 1 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.3529 )
+material_override = SubResource( 5 )
+texture = ExtResource( 2 )
+
+[node name="Particles" type="Particles" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -26.1988 )
+amount = 250
+speed_scale = 0.5
+randomness = 0.44
+fixed_fps = 60
+process_material = SubResource( 2 )
+draw_pass_1 = SubResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Camera"]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 6 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Credits" type="Button" parent="."]
+margin_right = 57.0
+margin_bottom = 20.0
+text = "Credits"
+flat = true
+align = 0
+script = ExtResource( 5 )
+
+[connection signal="button_up" from="Credits" to="Credits" method="_on_Credits_button_up"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bossfight-bass.ogg-18dc90fc037af117579c7f10f37fcbb5.oggstr"
+
+[deps]
+
+source_file="res://Assets/bgm/anthony/bossfight/stems/bossfight-bass.ogg"
+dest_files=[ "res://.import/bossfight-bass.ogg-18dc90fc037af117579c7f10f37fcbb5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

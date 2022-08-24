@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NR_Theme.mp3-28a12723c89f1bc1c666a22590a1778b.mp3str"
+
+[deps]
+
+source_file="res://Assets/bgm/NR_Theme.mp3"
+dest_files=[ "res://.import/NR_Theme.mp3-28a12723c89f1bc1c666a22590a1778b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

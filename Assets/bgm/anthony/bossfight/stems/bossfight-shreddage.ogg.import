@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bossfight-shreddage.ogg-f1dea8eb66eae7fa1eda58e9cdb70c72.oggstr"
+
+[deps]
+
+source_file="res://Assets/bgm/anthony/bossfight/stems/bossfight-shreddage.ogg"
+dest_files=[ "res://.import/bossfight-shreddage.ogg-f1dea8eb66eae7fa1eda58e9cdb70c72.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

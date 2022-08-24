@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/yummer-guitar.ogg-d7a1589933c16bfa6b86d8a925e7903f.oggstr"
+
+[deps]
+
+source_file="res://Assets/bgm/anthony/yummer/stems/yummer-guitar.ogg"
+dest_files=[ "res://.import/yummer-guitar.ogg-d7a1589933c16bfa6b86d8a925e7903f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

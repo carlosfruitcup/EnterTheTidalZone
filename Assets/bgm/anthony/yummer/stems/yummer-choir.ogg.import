@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/yummer-choir.ogg-2aba29ba96cfb87baed71cd94f5318cc.oggstr"
+
+[deps]
+
+source_file="res://Assets/bgm/anthony/yummer/stems/yummer-choir.ogg"
+dest_files=[ "res://.import/yummer-choir.ogg-2aba29ba96cfb87baed71cd94f5318cc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/titleLoop.mp3-16ee7a49294db9ff08048a2db0d037c8.mp3str"
+
+[deps]
+
+source_file="res://Assets/bgm/titleLoop.mp3"
+dest_files=[ "res://.import/titleLoop.mp3-16ee7a49294db9ff08048a2db0d037c8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/choose_zone.mp3-b2095a359af49db8a4450dfc8911078c.mp3str"
+
+[deps]
+
+source_file="res://Assets/ssfx/choose_zone.mp3"
+dest_files=[ "res://.import/choose_zone.mp3-b2095a359af49db8a4450dfc8911078c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
